@@ -22,7 +22,7 @@ const Edit = (props) => {
          };
     
         
-         await axios(`http://localhost:5000/edit/${ enlace.id}`, {
+         await axios(`${process.env.REACT_APP_API_URL}/edit/${ enlace.id}`, {
               method: "put",              
               headers : { 'x-access-token' : token},
               data

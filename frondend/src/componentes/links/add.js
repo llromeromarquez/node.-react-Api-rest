@@ -20,7 +20,7 @@ const Add = () => {
             "descripcion": e.descripcion
          };
          
-         await axios(`http://localhost:5000/add`, {
+         await axios(`${process.env.REACT_APP_API_URL}/add`, {
           method: "post",              
           headers : { 'x-access-token' : token},
           data

@@ -5,6 +5,10 @@ import { useHistory } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import useAuth from "./useAuth";
 
+
+
+ // import config from "../../config";
+
 // import { ingresar } from "../servicioPet";
 
 const Signin = () => {
@@ -20,8 +24,9 @@ const Signin = () => {
     };
     
     
-    const res = await axios.post("http://localhost:5000/ingresar", credenciales);
-    alert("hola");
+   
+    const res = await axios.post(`${process.env.REACT_APP_API_URL}/ingresar`, credenciales);
+    
     if (res.data.auth)  {
    //   sessionStorage.setItem("token", res.data.token);  
      

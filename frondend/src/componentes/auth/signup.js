@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "./useAuth";
+import env from "react-dotenv";
+
 // import { ingresar } from "../servicioPet";
 
 const Signup = () => {
@@ -18,8 +20,9 @@ const Signup = () => {
       nombreus: data.nombreus,
       clave: data.clave,
     };
-
-    const res = await axios.post("http://localhost:5000/registrarse", credenciales);
+   
+    
+    const res = await axios.post(`${process.env.REACT_APP_API_URL}/registrarse`, credenciales);
 
     if ((res.data.auth = "true")) {
       

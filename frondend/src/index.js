@@ -1,5 +1,6 @@
 import React  from 'react';
 import ReactDOM from 'react-dom';
+
 import Navbar from "./componentes/partials/navigation";
 import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -17,6 +18,7 @@ import reportWebVitals from './reportWebVitals';
 import  {PrivateRoute, NotPrivateRoute}  from './componentes/links/PrivateRoute';
 import AuthProvider from './componentes/auth/authProvider';
 import NotFoundPage from './componentes/notFoundPage';
+
 
 
 ReactDOM.render(

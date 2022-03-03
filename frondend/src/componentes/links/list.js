@@ -12,7 +12,7 @@ const List = () => {
  
   const cargarLinks = async() => {
    
-        const res = await axios("http://localhost:5000/links", {
+        const res = await axios(`${process.env.REACT_APP_API_URL}/links`, {
               
                   headers : { 'x-access-token' : token }
         });
@@ -46,7 +46,7 @@ const List = () => {
   const handleClick = async(e) => {
     
 
-          await axios(`http://localhost:5000/delete/${ e }`, {
+          await axios(`${process.env.REACT_APP_API_URL}/delete/${ e }`, {
               method: "delete",              
               headers : { 'x-access-token' : token}
                    
